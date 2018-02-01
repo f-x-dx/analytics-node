@@ -14,7 +14,7 @@ const isString = require('lodash.isstring')
 const setImmediate = global.setImmediate || process.nextTick.bind(process)
 const noop = () => {}
 
-class Analytics {
+class A {
   /**
    * Initialize a new `Analytics` with your Segment project's `writeKey` and an
    * optional dictionary of `options`.
@@ -288,4 +288,6 @@ class Analytics {
   }
 }
 
-module.exports = Analytics
+module.exports = {
+  SEGMENT: A
+}
